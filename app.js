@@ -9,10 +9,23 @@
 // Paper disproves Spock
 // Spock vaporizes Rock
 // (and as it always has) Rock crushes Scissors
+let userScore = 0
+let computerScore = 0
+const computerSpan = document.querySelector("[data-compvalue]")
+const userSpan = document.querySelector("[data-uservalue]")
+const rockDiv = document.getElementById("Rock")
+const scissorsDiv = document.getElementById("Scissors")
+const paperDiv = document.getElementById("Paper")
+const lizardDiv = document.getElementById("Lizard")
+const spockDiv = document.getElementById("Spock")
+//const bbttnn = document.querySelectorAll('button')
+
+
+
 
 const randomMove = () => {
     const options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-    const randomNum = Math.floor(Math.random() * 5)
+    const randomNum = Math.floor(Math.random() * options.length)
     return options[randomNum]
 }
 
@@ -38,7 +51,7 @@ let theBrain = randomMove()
      } else if (computer == "Paper" && user == "Paper"){
          return "Tie" 
      } else if (computer == "Paper" && user == "Rock"){
-         return "Paper covers Rock, I Lose!"
+         return "Paper covers Rock, I Lose!" + computerSpan.innerHTML++
      } else if (computer == "Paper" && user == "Scissors"){
          return "Scissors cuts Paper, I Win!"
      } else if (computer == "Paper" && user == "Lizard"){
@@ -52,7 +65,7 @@ let theBrain = randomMove()
      } else if (computer == "Scissors" && user == "Paper"){
          return "Scissors cuts Paper, I Lose!"
      } else if (computer == "Scissors" && user == "Rock"){
-         return "Rock crushes Scissors, I Win!"
+         return "Rock crushes Scissors, I Win!" + userSpan.innerHTML++
      } else if (computer == "Scissors" && user == "Lizard"){
          return "Scissors decapitates Lizard, I Lose!"
      } else if (computer == "Scissors" && user == "Spock"){
@@ -62,7 +75,7 @@ let theBrain = randomMove()
      } else if (computer == "Lizard" && user == "Lizard"){
          return "Tie"
      } else if (computer == "Lizard" && user == "Rock"){
-         return "Rock crushes Lizard, I Win!"
+         return "Rock crushes Lizard, I Win!" + userSpan.innerHTML++
      } else if (computer == "Lizard" && user == "Paper"){
          return "Lizard eats Paper, I Lose!"
      } else if (computer == "Lizard" && user == "Scissors"){
@@ -74,7 +87,7 @@ let theBrain = randomMove()
      } else if (computer == "Spock" && user == "Spock"){
          return "Tie"
      } else if (computer == "Spock" && user == "Rock"){
-         return "Spock vaporizes Rock, I Lose!"
+         return "Spock vaporizes Rock, I Lose!" + computerSpan.innerHTML++
      } else if (computer == "Spock" && user == "Paper"){
          return "Paper disproves Spock, I Win!"
      } else if (computer == "Spock" && user == "Scissors"){
@@ -84,5 +97,13 @@ let theBrain = randomMove()
      }
  }
 
- console.log(RockPaperScissors("Rock", theBrain))
+ //console.log(RockPaperScissors("Rock", theBrain))
+
+ const run = () => {
+rockDiv.addEventListener('click', function(){
+    console.log(RockPaperScissors("Rock", theBrain) )
+})
+ }
+
+ run()
  
