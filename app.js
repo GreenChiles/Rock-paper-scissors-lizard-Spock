@@ -18,21 +18,20 @@ const scissorsDiv = document.getElementById("Scissors")
 const paperDiv = document.getElementById("Paper")
 const lizardDiv = document.getElementById("Lizard")
 const spockDiv = document.getElementById("Spock")
-//const bbttnn = document.querySelectorAll('button')
 
 
 
+const options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
-const randomMove = () => {
-    const options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-    const randomNum = Math.floor(Math.random() * options.length)
-    return options[randomNum]
+const randomMove = (arr) => {
+    let randomNum = Math.floor(Math.random() * arr.length)
+    return arr[randomNum] 
 }
 
 //console.log(randomMove())
 
 
-let theBrain = randomMove()
+let theBrain = randomMove(options)
 //console.log(theBrain)
 
  const RockPaperScissors = (user, computer) => {
@@ -101,7 +100,8 @@ let theBrain = randomMove()
 
  const run = () => {
 rockDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Rock", theBrain) )
+    console.log(RockPaperScissors("Rock", theBrain) 
+    )
 })
 paperDiv.addEventListener('click', function(){
     console.log(RockPaperScissors("Paper", theBrain) )
