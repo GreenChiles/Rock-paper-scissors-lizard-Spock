@@ -25,7 +25,6 @@ const options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 //for(let i = 0; i < options.length; i++)
 
 const randomMove = (arr) => {
-
     let randomNum = Math.floor(Math.random() * arr.length)
     return arr[randomNum] 
 }
@@ -36,7 +35,7 @@ const randomMove = (arr) => {
 //let theBrain = randomMove(options)
 //console.log(theBrain)
 
- const RockPaperScissors = (user, computer) => {
+ const theBrain = (user, computer) => {
      if (computer == "Rock" && user == "Rock"){
          return "Tie"
      } else if (computer == "Rock" && user == "Paper"){
@@ -102,20 +101,20 @@ const randomMove = (arr) => {
 
  const run = () => {
 rockDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Rock", randomMove(options)) 
+    console.log(theBrain("Rock", randomMove(options)) 
     )
 })
 paperDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Paper", randomMove(options)) )
+    console.log(theBrain("Paper", randomMove(options)) )
 })
 scissorsDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Scissors", randomMove(options)) )
+    console.log(theBrain("Scissors", randomMove(options)) )
 })
 lizardDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Lizard", randomMove(options)) )
+    console.log(theBrain("Lizard", randomMove(options)) )
 })
 spockDiv.addEventListener('click', function(){
-    console.log(RockPaperScissors("Spock", randomMove(options)) )
+    console.log(theBrain("Spock", randomMove(options)) )
 }) 
  }
 
