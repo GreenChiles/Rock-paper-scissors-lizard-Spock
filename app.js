@@ -39,20 +39,22 @@ const randomMove = (arr) => {
 //console.log(theBrain)
 
  const theBrain = (user, computer) => {
+//const computerRock = computerShow.innerHTML ="Rock"
+
      if (computer == "Rock" && user == "Rock"){
          return "Tie" 
      } else if (computer == "Rock" && user == "Paper"){
-         return "Paper covers Rock, I Win!" + userSpan.innerHTML++  
+         return "Paper covers Rock, I Win!" + userSpan.innerHTML+++ computerRock
      } else if (computer == "Rock" && user == "Scissors"){
-         return "Rock crushes Scissors, I Lose!" + computerSpan.innerHTML++
+         return "Rock crushes Scissors, I Lose!" + computerSpan.innerHTML++ + computerRock
      } else if (computer == "Rock" && user == "Lizard"){
-         return "Rock crushes Lizard, I Lose!" + computerSpan.innerHTML++
+         return "Rock crushes Lizard, I Lose!" + computerSpan.innerHTML++ + computerRock
      } else if (computer == "Rock" && user == "Spock"){
-         return "Spock vaporizes Rock, I Win!"  + userSpan.innerHTML++
+         return "Spock vaporizes Rock, I Win!"  + userSpan.innerHTML++ + computerRock
 
 
      } else if (computer == "Paper" && user == "Paper"){
-         return "Tie" + compPaper
+         return "Tie" 
      } else if (computer == "Paper" && user == "Rock"){
          return "Paper covers Rock, I Lose!" + computerSpan.innerHTML++
      } else if (computer == "Paper" && user == "Scissors"){
@@ -108,20 +110,20 @@ const randomMove = (arr) => {
 
  const run = () => {
 rockDiv.addEventListener('click', function(){
-    console.log(theBrain("Rock", randomMove(options)), show()
+    console.log(theBrain("Rock", randomMove(options)), 
     )
 })
 paperDiv.addEventListener('click', function(){
-    console.log(theBrain("Paper", randomMove(options)), show() )
+    console.log(theBrain("Paper", randomMove(options)),  )
 })
 scissorsDiv.addEventListener('click', function(){
-    console.log(theBrain("Scissors", randomMove(options)), show() )
+    console.log(theBrain("Scissors", randomMove(options)),  )
 })
 lizardDiv.addEventListener('click', function(){
-    console.log(theBrain("Lizard", randomMove(options)), show() )
+    console.log(theBrain("Lizard", randomMove(options)),  )
 })
 spockDiv.addEventListener('click', function(){
-    console.log(theBrain("Spock", randomMove(options)), show() )
+    console.log(theBrain("Spock", randomMove(options)),  )
 }) 
  }
 
