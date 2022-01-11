@@ -2,3 +2,10 @@ body {
     background-color: black;
     color: whitesmoke;
 }
+
+#computerShow{
+    border:solid 1px chartreuse;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
