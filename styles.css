@@ -4,8 +4,30 @@ body {
 }
 
 #computerShow{
-    border:solid 1px chartreuse;
+    border:solid 5px darkred;
     height: 50px;
     width: 50px;
     float: left;
 }
+
+#userShow{
+    border: solid 5px darkblue;
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+
+.Options{
+    display: grid;
+    height: 300px;
+    width: 300px;
+    
+    grid-template-rows: 150px 150px ;
+  grid-template-columns: 150px 150px 150px;
+}
+
+.Options > button{
+    
+    color: darkviolet;
+}
+
