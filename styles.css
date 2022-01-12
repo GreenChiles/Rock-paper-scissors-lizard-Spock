@@ -1,6 +1,12 @@
 body {
     background-color: black;
     color: whitesmoke;
+    font-family: "Chicken Crispy";
+}
+
+@font-face {
+    font-family: "Chicken Crispy";
+    src: url("/Fonts/chicken_crispy/Chicken\ Cripsy.otf")
 }
 
 #computerShow{
@@ -17,17 +23,17 @@ body {
     float: right;
 }
 
+
+
+
+/*
 .Options{
-    display: grid;
-    height: 300px;
-    width: 300px;
     
-    grid-template-rows: 150px 150px ;
-  grid-template-columns: 150px 150px 150px;
-}
+} */
 
 .Options > button{
-    
+    font-size: larger;
+    font-weight: bold;
     color: darkviolet;
 }
 
